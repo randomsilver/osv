@@ -1,0 +1,1127 @@
+/* ==========================================================================
+   Custom and Foundation adjusted SASS variables
+   ========================================================================== */
+
+// Core variables and mixins
+@import "variables";
+@import "mixins";
+
+/* Bootstrap 3 Variable Amends */
+/* _type.scss */
+$font-size-h1: emCalc(44);
+$font-size-h2: emCalc(22);
+$font-size-h3: emCalc(22);
+$font-size-h4: emCalc(18);
+$font-size-h5: emCalc(18);
+$font-size-p: emCalc(14);
+/* _navbar.scss */
+$navbar-default-link-color: $white;
+$navbar-default-link-hover-color: $white;
+
+
+/* Custom Variables & Mixins */  
+/* Heights */
+$header-height-small:51px;
+$nav-height:emCalc(375);
+/* Margins */
+$paragraph-margin-bottom: emCalc(20);
+$h1-margin-bottom:emCalc(6);
+
+@mixin kellum-method { 
+	/* Background image / text replacement */
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+@mixin reset-list {
+	list-style:none;
+	padding:0;
+	margin:0;
+}
+
+@mixin background-opacity($color, $opacity: 0.8) {
+    background-color: $color; /* The Fallback */
+    background-color: rgba($color, $opacity);
+}
+
+@mixin arrow-link{
+	background:url(../img/arrow-link.png) no-repeat right 2px;
+	background-color:none;
+	display:inline-block;
+	padding-right:18px;
+}
+
+@mixin avenir-medium{
+	font-family:'Conv_AvenirLTStd-Medium', Arial, Helvetica, sans-serif;
+}
+
+@mixin avenir-book{
+	font-family:'Conv_AvenirLTStd-Book', Arial, Helvetica, sans-serif;
+}
+
+@mixin georgia{
+	font-family:Georgia, Arial, Helvetica, sans-serif;
+}
+
+@mixin default-font{
+	font-family:Arial, Helvetica, sans-serif;
+}
+
+@function emCalc($target, $context:14) {
+    @return $target / $context * 1em;
+}
+
+/* ==========================================================================
+   Custom fonts
+   ========================================================================== */
+ 
+/* Avenir Medium */   
+@font-face {
+	font-family: 'Conv_AvenirLTStd-Medium';
+	src: url('fonts/AvenirLTStd-Medium.eot');
+	src: local('☺'), url('../fonts/AvenirLTStd-Medium.woff') format('woff'), url('../fonts/AvenirLTStd-Medium.ttf') format('truetype'), url('../fonts/AvenirLTStd-Medium.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Avenir Book */
+@font-face {
+	font-family: 'Conv_AvenirLTStd-Book';
+	src: url('fonts/AvenirLTStd-Book.eot');
+	src: local('☺'), url('../fonts/AvenirLTStd-Book.woff') format('woff'), url('../fonts/AvenirLTStd-Book.ttf') format('truetype'), url('../fonts/AvenirLTStd-Book.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* ==========================================================================
+   Text sizing
+   ========================================================================== */
+
+h1{
+	text-transform:uppercase;
+	margin-bottom:$h1-margin-bottom;
+}
+
+h2, h3, p{
+	color:$black;
+}
+
+/* FONT SIZING - BASED ON FOUNDATION 4 EMCALC */
+
+h1, h2, h3, h4, h5, .intro p{
+	@include avenir-medium;
+	padding:0;
+	margin:0;
+}
+
+h1, h2, h3, h4, h5, p{
+	font-weight:normal;
+	word-wrap:break-word;
+}
+
+h1{
+	font-size:$font-size-h1;
+	line-height:emCalc(14.5);
+}
+
+h2{
+	font-size:$font-size-h2;	
+	line-height:emCalc(21);
+}
+
+h3{
+	font-size:$font-size-h3;
+	line-height:emCalc(21);
+}
+
+h4{
+	font-size:$font-size-h4;
+	line-height:emCalc(14);
+}
+
+h5{
+	font-size:$font-size-h5;
+	line-height:emCalc(14);
+}
+
+p{
+	font-size:$font-size-p;
+	line-height:emCalc(22);
+}
+
+/* ==========================================================================
+   Common styles (links, ordered-lists, tables etc.)
+   ========================================================================== */
+
+.arrow-link{
+	@include arrow-link;
+}
+
+img{
+	max-width:100%;
+	height:auto;
+	display:inline-block;
+}
+
+/* ==========================================================================
+   Layout structure
+   ========================================================================== */
+
+.container{
+	width:100%;
+	padding-top:$navbar-height;	
+}
+
+.content-wrapper{
+	margin:0 auto;
+	text-align:left;	
+	width:80%;
+	max-width:1020px;	
+	width:100%;
+	position:relative;
+}
+
+/*  COLUMN SETUP  */
+
+.sample-grid #container{
+	padding-top:0;
+}
+
+.sample-grid{ 
+	.columns {
+		color:#5e5e5e;
+		padding-top:20px;
+		padding-bottom:20px;
+	}
+	.large-12{
+		background:#f0f0f0;
+	}
+	.large-6{
+		background:#d1d1d1;
+	}
+	.large-4{
+		background:#bebebe;
+	}
+	.large-3{
+		background:#969696;	
+	}
+	.large-2{
+		background:#808080;	
+	}
+}
+
+/* ==========================================================================
+   Header / Nav
+   ========================================================================== */
+
+header{
+z-index:99999;
+position:relative;
+	.logo{
+		float:left;
+		background:$white;
+		img{
+			display:inline-block;
+			max-width:100%;
+			height:auto;
+		}
+	}
+	.header-inner{
+		margin:0 auto;
+		max-width:$screen-md-min;
+	}
+	.header-top{
+		float:left;
+		height:50px;
+		width:50%;
+	}	
+	.nav{
+		float:left;
+		clear:both;
+		height:50px;
+	}
+	nav > ul{
+		height:50px;
+		margin-left:20px;
+	}
+	nav li{
+		float:left;
+		height:100%;
+	}
+	nav a{
+		@include avenir-medium;
+		text-transform:uppercase;
+		font-size:emCalc(12);
+		line-height:emCalc(65);
+		color:$white;
+		display:block;
+		height:100%;
+		padding:0 emCalc(15);
+	}
+	nav a.active,
+	nav a:hover{
+		color:$white;
+		background:url(../img/nav-arrow-active.png) $charcoal no-repeat bottom center;
+	}
+	nav a:focus{
+		color:$white;
+	}
+	
+	/* ==========================================================================
+	   Mega Nav Drop Down
+	   ========================================================================== */
+	
+	nav{
+		float:left;
+		position:relative;
+	}
+	
+	.row .sub-nav.collapse{
+		width:emCalc(1002);
+		margin:0 auto;
+	}
+	
+	nav ul ul{
+		height:auto;
+		background:$charcoal;
+		width:200%;
+		height:$nav-height;
+		position:absolute;
+		left:-9999em;
+	}
+	
+	nav ul ul a,
+	nav ul ul a:hover,
+	nav ul ul a:focus{
+		width:auto;
+		background:none;
+		font-size:emCalc(16.5);
+		line-height:emCalc(24);
+		padding:0;
+		text-transform:none;
+		@include default-font;
+	}
+	
+	nav ul ul ul{
+		width:auto;
+		height:auto;
+		position:static;
+		left:auto;
+		background:none;
+	}
+	
+	nav ul ul li{
+		float:none;
+		height:auto;
+		background:none;
+	}
+	
+	nav ul li:hover ul{
+		left:-50%;
+	}
+	
+	.mega-nav ul li:hover ul{
+		display:none;
+	}
+	
+	/*nav ul ul div{
+		background:$white;
+		width:792px;
+		margin:0 auto;
+		position:static;
+	}*/
+
+}
+
+#mega-nav-panel{
+	float:left;
+	width:100%;
+	height:$nav-height;
+	margin-top:$navbar-height;
+	background:$charcoal;
+	display:none;
+	position:relative;
+}
+
+#mega-nav-panel .sub-nav,
+.sub-nav{
+	width:100%;
+	margin:0 auto;
+	position:static;
+}
+
+#mega-nav-panel .close-button{
+	@include avenir-medium;
+	background:url(../img/nav-close.png) no-repeat center right;
+	color:$white;
+	position:absolute;
+	bottom:-10px;
+	font-size:emCalc(14);
+	left:48%;
+	display:block;
+	width:77px;
+	height:33px;
+	padding:6px 30px 0 11px;
+	z-index:999;
+	cursor:pointer;
+}
+
+.scrolling-nav #mega-nav-panel{
+	position:fixed;
+	left:0;
+	z-index:9999;
+}
+
+.scrolling-nav .container{
+	/*padding-top:300px;*/
+}
+
+.sub-nav{
+	padding-top:42px;
+	padding-bottom:30px;
+	max-width:$screen-md-min;
+	h3{
+		font-size:emCalc(20);
+		margin-bottom:20px;
+	}
+	h4{
+		font-size:emCalc(14);
+		margin-bottom:8px;
+	}
+	h3, h4{
+		color:$green-bright;
+		text-transform:uppercase;
+	}
+	ul, li{
+		@include reset-list;
+	}
+	li, p{
+		font-size:emCalc(12);
+		margin-bottom:4px;
+		color:$white;
+	}
+	a,
+	a:hover,
+	a:focus{
+		color:$white;
+	}
+	img{
+		margin-bottom:20px;
+	}
+	.row{
+		margin-bottom:20px;
+	}
+	.row .col-xs-4.col-sm-4.col-md-4{
+		padding:0 30px 0 0;
+	}
+	.col-md-3 div{
+		border-left:1px solid $grey-dark;
+		min-height:280px;
+		padding:0 0 20px 20px;
+		margin-bottom:20px;
+	}
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+footer{
+	clear:both;
+	background:$charcoal;
+	min-height:300px;
+	padding:55px 0 90px 0;
+	.row{
+		margin:0;	
+	}
+	a{
+		color:$white;
+	}
+	.footer-inner{
+		max-width:790px;
+		margin:0 auto;
+		p{
+			font-size:emCalc(12);
+			text-align:center;
+			color:$white;
+		}
+	}
+	nav{
+		float:left;
+		width:100%;
+		border-bottom:1px solid $white;
+		margin-bottom:22px;
+		ul{
+			padding:0;
+			margin-bottom:22px;
+			text-align:center;
+		}
+		li{
+			display: inline;
+			@include reset-list;
+			padding-left:10px;
+		}
+		li:first-child{
+			padding-left:0;
+		}
+		a{
+			text-transform:uppercase;
+			font-size:emCalc(12);
+			@include avenir-medium;
+		}
+	}
+}
+
+/* ==========================================================================
+   Content Page
+   ========================================================================== */
+
+.content-page{
+	padding-top:50px;
+	margin-left: auto;
+    margin-right: auto;
+	.row{
+		padding-bottom:30px;
+		margin:0;
+	}
+	.inline-image{
+		margin-bottom:20px;
+		max-width:100%;
+		height:auto;
+	}
+}
+
+.intro{
+	padding-top:35px;
+	p{
+		font-size:emCalc(16);
+	}
+}
+
+.full-width-panel{
+	clear:both;
+	padding:55px 0 60px 0;
+	.panel-inner{
+		max-width:($screen-md-min + $grid-gutter-width);
+		margin:0 auto;
+	}
+	.row{
+		margin:0;
+	}
+	&.grey{
+		background:$grey;
+	}
+	h4{
+		font-size:emCalc(22);
+		text-transform:uppercase;
+		margin-bottom:emCalc(15);
+	}
+}
+
+.related-links{
+	padding:0;
+	width:100%;
+	.col-xs-12.col-sm-12.col-md-4{
+		div{
+			background:$grey;
+			padding:25px 30px 25px 20px;
+			margin-bottom:20px;
+		}
+	}
+	.arrow-link{
+		background-position:top right;
+		color:$black;
+		@include avenir-book;
+		font-size:emCalc(18);
+		display:block;
+	}
+}
+
+.related-items{
+	padding:0;
+	width:100%;
+	section{
+		background:$white;
+		margin-bottom:20px;
+		div{
+			padding:0 30px 15px 20px;
+		}
+		img{
+			margin-bottom:15px;
+		}
+		h5{
+			margin-bottom:emCalc(13);
+		}
+		p{
+			font-size:emCalc(12);
+		}
+		.arrow-link{
+			@include avenir-medium;
+			font-size:emCalc(15);
+			color:$black;
+			background-position:right 0;
+		}
+	}
+}
+
+/* ==========================================================================
+   Story Pages
+   ========================================================================== */
+
+body, html {
+	width:100%;
+	height:100%;
+}
+
+.story{	
+	margin-top:$navbar-height;
+}
+
+.story-chapter{
+	float:left;
+	width:100%;
+	min-height:100%;
+	position:relative;
+	padding-top:50px;
+	margin-top:-1px; /* Fix for chrome - pixel gap between fullscreen backgrounds */
+	h2{
+		font-size:emCalc(44);
+		line-height:emCalc(14.5);
+		text-transform:uppercase;
+	}
+	h3{
+		font-size:emCalc(22);
+	}
+	p{
+		@include avenir-medium;
+		font-size:emCalc(16);
+	}
+	.row{
+		margin:0;	
+	}
+	section{
+		background:$white;
+		padding:emCalc(30);
+		margin-bottom:50px;
+	}
+	.featured-facts{
+		margin-top:-50px; /* Offsets the margin bottom on the section in story */
+		margin-bottom:50px;
+	}
+	&.no-image{
+		background:$green;
+		section{
+			background:none;
+		}
+		h2,h3,p{
+			color:$white;
+		}
+	}
+	&.no-image blockquote,
+	blockquote{
+		border:none;
+		background:url(../img/quote-left-green.png) no-repeat 20px 30px;
+		@include background-opacity($black, 0.8);
+		margin-top:-50px;
+		padding-top:20px;
+		padding-bottom:30px;
+		p{
+			color:$white;
+			margin:0 0 0 30px;
+			line-height:emCalc(20);
+		}
+		p:last-child{
+			font-weight:bold;
+		}
+		div{
+			background:url(../img/quote-right-green.png) no-repeat bottom right;
+			padding:20px 40px 0 30px;
+			margin-bottom:10px;
+		}
+		div p,	
+		div p:last-child{
+			font-size:emCalc(18);
+			line-height:emCalc(24);
+			@include georgia;
+			font-style:italic;
+			font-weight:normal;
+			margin:0 0 15px 0;
+		}
+	}
+	&.no-image blockquote{
+		margin-top:-50px; /* Bring panel back up because it looks like a big gap on the green background with no white panel */
+	}
+	.story-tags{
+		padding-left:10px;
+	}
+}	
+
+.bg-story{ 
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-repeat:no-repeat !important;
+	background-position:top right !important;
+	background-size: cover !important; 
+	/* IMPORTANT used above to allow us to set background image on html without losing background properties (easier for CMS) */
+	
+}
+
+.featured-facts{
+	margin-bottom:50px;
+}
+
+.featured-facts div{
+	float:left;
+	@include background-opacity($green, 0.8);
+	padding:10px;
+	&:first-child{
+		border-right:1px solid transparent;
+		background-clip: padding-box;
+	}
+	h4{
+		font-size:emCalc(18);
+		margin-bottom:16px;
+		color:$black;
+	}
+	p{
+		@include avenir-book;
+		font-weight:bold;
+		font-size:emCalc(46);
+		line-height:emCalc(16);
+		letter-spacing:emCalc(-1);
+		color:$white;
+		padding:0;
+		margin:0;
+	}
+	h4,p{
+		text-transform:uppercase;	
+	}
+	p span{
+		float: left;
+		clear: both;
+    	width: 100%;
+		font-size:emCalc(3.65);
+		font-weight:normal;
+		letter-spacing:emCalc(0);
+		line-height:emCalc(22);
+	}
+	&.highlight{
+		background:$green;
+		h4,p{
+			color:$white;
+		}
+	}
+}
+
+.story-nav{
+	position:fixed;
+	bottom:0;
+	right:0;
+	z-index:9;
+	ul,li{
+		@include reset-list;
+	}
+	li{
+		position:relative;
+	}
+	a{
+		@include kellum-method;
+		display:block;
+		background:url(../img/nav-story.png) no-repeat 0 -67px;
+		width:69px;
+		height:67px;
+	}
+	a.reverse{
+		background-position:0 0;
+	}
+	.tooltip{	
+		@include background-opacity($white, 0.9);
+		color:$black;
+		font-size:emCalc(12);
+		position:absolute;
+		top:0;
+		left:-181px;
+		display:none;
+		/*width:145px;*/
+		min-width:180px;
+		height:67px;
+		padding-right:8px;
+		li{
+			display:block;
+			@include avenir-medium;
+			text-transform:uppercase;
+			padding:0 20px;
+			font-size:emCalc(18);
+			line-height:emCalc(85);
+		}
+	}
+	li:hover .tooltip{
+		display:block;
+	}
+}
+
+.story-tags{
+	float:left;
+	margin-bottom:50px;
+	&.columns.large-6{
+		background:none;
+		padding:25px 0 130px 0;	
+	}
+	h4{
+		float:left;
+		background:$black;
+		color:$white;
+		margin-bottom:1px;
+		font-weight:normal;
+	}
+	h4, li a{
+		@include avenir-medium;
+		font-weight:normal;
+		font-size:emCalc(12);
+		line-height:emCalc(38);
+		text-transform:uppercase;
+		height:32px;
+		padding:0 10px;
+	}
+	ul{
+		clear:both;
+	}
+	ul,li{
+		float:left;
+		@include reset-list;
+	}
+	li{
+		position:relative;
+	}
+	li a{
+		margin:0 1px 1px 0;
+		background:$green-bright;
+		color:$black;
+		display:inline-block;
+	}
+	li a:hover{
+		background:$green-dark;
+	}
+	ul ul{
+		position:absolute;
+		top:33px;
+		left:0;
+		display:none;
+		@include background-opacity($black, 0.8);
+		padding:10px;
+		width:255px;
+		z-index:999;
+	}
+	ul ul li{
+		width:100%;
+		border-bottom:1px solid $grey-border;
+	}
+	ul ul li a,
+	ul ul li a:hover{
+		@include arrow-link;
+		display:block;
+		color:$white;
+		line-height:emCalc(22);
+		height:auto;
+		padding-top:8px;
+		padding-bottom:6px;
+		padding-left:0;
+		background-position:right 8px;
+	}	
+	ul li:hover ul{
+		display:block;
+	}
+}
+
+footer .story-tags{
+	margin:0;
+}
+
+/* ==========================================================================
+   Custom Responsive Layout
+   ========================================================================== */
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: $screen-md-min) and (max-width: $screen-md-max) { 
+
+	/* ==========================================================================
+		Header / Nav
+		========================================================================== */
+
+	header{
+		.row{
+			max-width:($container-desktop - $grid-gutter-width);
+		}
+	}
+
+	.sub-nav{
+		max-width:($container-desktop - (2 * $grid-gutter-width));
+	}
+
+	/* ==========================================================================
+		Content Page
+		========================================================================== */
+
+	.full-width-panel{
+		.panel-inner{
+			max-width:($container-desktop - $grid-gutter-width);
+		}
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: $screen-sm-min) and (max-width: $screen-sm-max) {
+
+	/* ==========================================================================
+		Text sizing
+		========================================================================== */	
+		
+	h1, .story-chapter h2{
+		font-size:emCalc(38);
+	}
+		
+	h2, h3, .story-chapter h3, .full-width-panel h4{
+		font-size:emCalc(20);
+	}		
+		
+	p{
+		font-size:emCalc(13)
+	}
+		
+	.story-chapter p, .intro p,
+	.story-chapter.no-image blockquote div p,
+	.story-chapter blockquote div p{
+		font-size:emCalc(15)
+	}
+
+	/* ==========================================================================
+		Header / Nav
+		========================================================================== */
+
+	header{
+		.row{
+			max-width:($container-tablet - $grid-gutter-width);
+		}
+		nav ul{
+		
+		}
+		nav a{
+			font-size:emCalc(9);
+			line-height:emCalc(85);
+			padding:0 emCalc(8.5);
+		}
+	}
+
+	.sub-nav{
+		max-width:($container-tablet - (2 * $grid-gutter-width));
+	}
+
+	/* ==========================================================================
+		Layout structure
+		========================================================================== */
+
+	.content-wrapper{
+		width:100%;	
+	}
+
+	/* ==========================================================================
+		Content Page
+		========================================================================== */
+
+	.full-width-panel{
+		.panel-inner{
+			max-width:($container-tablet - $grid-gutter-width);
+		}
+	}		
+
+}
+
+/* Extra Small devices (mobiles, 767px and down) */
+@media (max-width: $screen-xs-max) {
+
+	/* ==========================================================================
+		Text sizing
+		========================================================================== */						
+		
+	h1, .story-chapter h2{
+		font-size:emCalc(30);
+	}
+		
+	h2, h3, .story-chapter h3, .full-width-panel h4{
+		font-size:emCalc(18);
+	}
+		
+	p{
+		font-size:emCalc(13)
+	}
+		
+	.story-chapter p, .intro p,
+	.story-chapter.no-image blockquote div p,
+	.story-chapter blockquote div p{
+		font-size:emCalc(14)
+	}
+		
+	h2, h3, p{
+		color:$black;
+	}	
+
+	/* ==========================================================================
+		Header / Nav
+		========================================================================== */
+	
+	header{
+		.navbar{
+			height:51px;
+		}
+		.logo{
+			width:85px;
+		}
+		.header-top{
+			width:1%;
+		}
+	}
+		
+	#mega-nav-panel{
+		display:none !important;
+	}
+	
+	/* ==========================================================================
+	   Footer
+	   ========================================================================== */
+
+	footer{
+		.row div{
+			padding:0;
+		}
+		.story-tags{
+			margin-top:-55px; /* Offsets the padding top on the footer */
+			width:100%;
+		}
+		nav{
+			ul, li{
+				text-align:left;
+				width:100%;
+				margin:0;
+			}
+			li{
+				clear:both;
+				display:block;
+				border-top:1px solid $white;
+				padding:0;
+			}
+			li:first-child{
+				border:none;
+			}
+			a{
+				display:block;
+				min-height:40px;
+				line-height:emCalc(48);
+				padding-left:10px;
+			}
+		}
+	}	
+
+	/* ==========================================================================
+		Layout structure
+		========================================================================== */
+		
+	.container{
+		padding-top:50px;
+	}
+		
+	/* ==========================================================================
+		Content Page
+		========================================================================== */
+
+	.full-width-panel{
+		.panel-inner{
+			padding:0 15px;
+			margin:0 auto;
+		}
+	}					
+
+	/* ==========================================================================
+		Story Pages
+		========================================================================== */
+		
+	.story{
+		margin-top:$header-height-small;
+	}	
+
+	.story-chapter{
+		height:auto;
+		min-height:1px;
+		padding-top:0;
+		.bg-story{
+			position:static;
+			top:auto;
+			left:auto;
+			float:left;
+			width:100%;
+			height:200px;			 
+		}	
+		&.no-image .bg-story{
+			display:none;
+		}
+		.content-wrapper{
+			clear:both;
+		}	
+		section{
+			margin-bottom:0;
+		}
+		&.no-image blockquote,
+		blockquote{
+			margin-top:0px;
+		}
+		.story-tags{
+			display:none !important;	
+		}			
+					
+	}	
+		
+	.story-nav{
+		display:none !important;		
+	}	
+	.story-tags{
+		h4, li a{
+			font-size:emCalc(12);
+			line-height:emCalc(48);
+			height:40px;
+			width:100%;
+		}
+		ul,li{
+			width:100%;
+		}
+		li a{
+			display:block;
+			margin-right:0;
+		}
+		ul ul{
+			position:relative;
+			top:0;
+			width:100%;
+			padding-bottom:18px;
+		}
+		ul ul li a{
+			font-size:emCalc(12);
+		}
+	}	
+
+	.featured-facts div{
+		width:100%;
+	}
+
+	.banner{
+		overflow:hidden;	
+		img{
+			width:auto;
+			height:100px;
+			overflow:hidden;
+		}
+	}				
+
+}

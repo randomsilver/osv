@@ -1,0 +1,410 @@
+// Import all the variables into the main css file.
+@import "variables";
+
+// I gather this file is a starting point for the project.
+// @import "bootstrap";
+
+// Include responsive Bootstrap styles
+// @import "bootstrap-responsive";
+
+$borderColour: #CCCCCC;
+$accentColour: #81983C;
+$mainColour: #FFFFFF;
+$textColour: #55606A; 
+$thumbnailHoverColour: #506a04;
+$darkColour: #000000;
+
+
+body {
+	/*background: #F5F6F6;*/
+	background: $mainColour;
+	color: $textColour;
+	font-weight: 300;
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	line-height: 28px;
+	padding-top: 50px; /* Add top padding for navbar-top-fixed */
+  	padding-bottom: 30px; /* Add top padding for navbar-top-fixed */
+  	height: 100%;
+
+  	a:focus {
+  		outline: 0;
+  		border: 10px solid red;
+  	}
+  	.nav-collapse {
+  		.nav > li {
+  			float: left;
+  		}
+  	}
+	.navbar-fixed-top .navbar-inner,
+	.navbar-inner {
+		background-color: $mainColour;
+		background-image: none;
+		border-radius: 0;
+		border: none;
+		padding-left: 0;
+		padding-right: 0;
+		box-shadow: none;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+
+		h1 {
+
+			line-height: 0; 
+
+			a.brand {
+				margin-left: 0;
+				margin-top: 7px;
+				padding-left: 0;
+				background: url('../img/osv-logo.png') 0 0 no-repeat; 
+				width: 266px;
+				height: auto;
+				display: block;
+
+				.strapline {
+					font-family: 'Open Sans', sans-serif;
+					font-size: 10px;
+					margin-left: 26px;
+					margin-left: 4px;
+					line-height: 9em;
+				}
+			}
+		}
+		.nav {
+			display: block;
+			position: relative;
+			margin-right: 10px;
+
+			.icon-home {
+				display: none;
+			}
+
+			a {
+				-webkit-transition: 1s all ease;
+				-moz-transition: 1s all ease;
+				transition: 1s all ease;
+				border-bottom: 3px solid $mainColour;
+				text-transform: uppercase;
+
+				&:hover {
+					background-color: #FFFFFF;
+				}
+			}
+			
+			.active  > a {
+				background-color: transparent;
+				box-shadow: none;
+				border-bottom: 3px solid $accentColour;
+			}
+			.active a:hover {
+				background-color: transparent;
+				box-shadow: none;
+				-webkit-box-shadow: none;
+				-moz-box-shadow: none;
+			}
+		}
+
+	}
+	#wrap {
+		margin-bottom: -53px;
+		height: auto !important;
+		min-height: 100%;
+	}
+	#push, #footer {
+		height: 53px;
+	}
+	#footer {
+		position: relative;
+	}
+	.page {
+		padding: 25px 0 100px 0;
+		position: relative;
+		z-index: 99;
+
+	}
+
+	.alt-page {
+		background-color: $accentColour;
+	}
+
+	.hero-unit {
+		background-color: $mainColour;
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.nav-pills {
+		border-bottom: 1px solid $borderColour;
+	}
+	.nav-pills > li {
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+		border-radius: 0;
+	}
+	.nav-pills > li > a {
+		color: $textColour;
+
+		&.selected,
+		&:hover,
+		a:focus  {
+			background-color: #FFFFFF;
+			color: $accentColour;
+			border-radius: 0;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+		}
+	}
+	section {
+		min-height: 600px;
+	}
+	#home {
+		position: relative;
+		overflow: hidden;
+		/*background: url('../../templates/img/ring-home.jpg') 50% 50% no-repeat;*/
+		width: 100%;
+		top: -10px;
+		min-height: 600px;
+
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
+	#gallery {
+		.thumbnails {
+/*			max-height: 400px;
+			overflow-y: scroll;*/
+			border: 0;
+
+			a {
+				padding: 0;
+			/*	border: 0 !important;*/
+				display: inline-block;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				-o-border-radius: 0;
+			}
+			a.thumbnail:hover,
+			a.thumbnail:focus {
+				border: 1px solid $accentColour !important;
+				-webkit-box-shadow: 0 1px 4px rgba($thumbnailHoverColour, 0.25);
+				-moz-box-shadow: 0 1px 4px rgba($thumbnailHoverColour, 0.25);
+				box-shadow: 0 1px 4px rgba($thumbnailHoverColour, 0.25);
+				background-color: #FFFFFF;
+			}
+		}
+	}
+	.img-center {
+		margin: 20px auto;
+		display: block;
+		width: 75%;
+		height: 75%;
+	}
+	.one {
+		color: $darkColour;
+	}
+	.silvered {
+		color: $borderColour;
+	}	
+	.vein {
+		color: $accentColour;
+	}
+}
+
+
+.footnote {
+	font-size: 0.8em;
+}
+.screen-reader-text {
+	position:absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+.modal.fade {
+	-webkit-transition: opacity 0.5s linear, 0.3s ease-out;
+	-moz-transition: opacity 0.5s linear, 0.3s ease-out;
+	-o-transition: opacity 0.5s linear, 0.3s ease-out;
+	transition: opacity 0.5s linear, 0.3s ease-out;
+	top: 25%;
+}
+.modal {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+
+	.modal-body {
+		padding: 0;	
+
+		h4 {
+			margin-left: 15px;
+			margin-right: 15px;
+			font-size: 14px;
+		}
+	}
+	.modal-footer {
+		border-top: 0;
+		background-color: $mainColour;
+	}
+}
+/* Button override */
+.modal {
+	.btn {
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-o-border-radius: 0;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	padding: 8px;
+	color: $textColour;
+	background-color: $mainColour;
+	border: 1px solid $borderColour;
+	background-image: none;
+}
+	.btn-primary {
+		background-image: none;
+		background-color: $mainColour;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		-o-box-shadow: none;
+			
+			&:hover,
+			&:focus,
+			&:active,
+			&.active,
+			&.disabled,
+			&[disabled] {
+			background-color: $mainColour;
+			border: 1px solid $accentColour;
+			color: $textColour;
+			-webkit-box-shadow: none;
+			-moz-box-shadow: none;
+			-o-box-shadow: none;
+
+
+		}
+	}
+}
+
+
+
+
+
+
+/* Remove top padding when top navbar goes static in narrow viewports */
+@media (max-width: 979px) {
+	body {
+		padding-top: 100px;
+
+		.navbar-fixed-top {
+			position: fixed;
+
+			.navbar-inner {
+				h1 a.brand {
+					margin-left: 35px;
+					margin-top: 0;
+				}
+				.btn-navbar {
+				margin-right: 30px;
+				text-shadow: none;
+				-webkit-text-shadow: none;
+				-moz-text-shadow: none;
+				border-radius: 0;
+				-webkit-border-radius: 0;
+				-moz-border-radius: 0;
+				background-color: #FFFFFF;
+				border: 0;
+				background-image: none;
+
+					.icon-bar {
+						margin-bottom: 4px;
+						text-shadow: none;
+						-webkit-text-shadow: none;
+						-moz-text-shadow: none;
+						background-color: #CCCCCC;
+						border: none; 
+						border-radius: 0;
+						-webkit-border-radius: 0;
+						-moz-border-radius: 0;
+					}
+				}
+
+				&:hover {
+					background-color: #FFFFFF;
+				}
+				.nav-collapse {
+					.pull-right {
+						margin-left: 24px;
+						.nav > li {
+							float: left;
+								.active {
+									> a {
+										display: inline-block;
+										padding-left: 0 !important;
+									}
+								}
+							 	 a {
+								padding-left: 0;
+								width: auto;
+								&:hover {
+									background-color: transparent;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 480px) {
+	.page {
+		/*padding-top: 0;*/
+
+		.nav-collapse {
+			/*overflow: visible;
+			height: auto;*/
+			.nav > li {
+				float: left;
+
+				a:hover, 
+				a:focus {
+					background-color: #FFFFFF;
+				}
+			}
+		}
+		.active > a {
+			border-bottom: none;
+		}
+		#home {
+			img {
+				/*margin-top: 20% !important;*/
+			}
+		}
+	}
+
+}
+@media (max-width: 320px) {
+	body {
+		.nav-collapse {
+			/*overflow: visible;
+			height: auto;*/
+			.nav > li {
+				float: left;
+
+				a:hover, 
+				a:focus {
+					background-color: #FFFFFF;
+				}
+			}
+		}
+	}
+}

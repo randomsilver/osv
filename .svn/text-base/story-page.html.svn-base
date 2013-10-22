@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LBG.com - Story Page Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="css/sass-bootstrap.css" rel="stylesheet" media="screen">
+        <!-- CSS for IE7 and non-responsive pages (Uncomment Below)-->
+        <!-- <link href="css/non-responsive.css" rel="stylesheet" media="screen"> -->
+        
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+          <script src="../../assets/js/html5shiv.js"></script>
+          <script src="../../assets/js/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <!-- Header Starts -->
+        <header>
+			<!-- Main Navigation Starts -->
+			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<div class="header-inner">
+				<div class="logo">
+					<img src="img/logo.png" alt="Lloyds Banking Group"/>
+				</div>					
+				<div class="header-top">
+						<!-- Search etc. will go here -->
+				</div>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="collapse navbar-collapse navbar-ex1-collapse">
+					<nav>
+						<ul class="nav navbar-nav">
+							<li><a href="#" title="Our group">Our group</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>An overview of the group</h3>
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Responsible business</h4>
+														<ul>
+															<li><a href="#" title="Reports">Reports</a></li>
+															<li><a href="#" title="Environments">Environments</a></li>
+															<li><a href="#" title="Policies &amp; Codes">Policies &amp; Codes</a></li>
+															<li><a href="#" title="Helping Britian Prosper">Helping Britian Prosper</a></li>
+															<li><a href="#" title="Community Investment">Community Investment</a></li>
+															<li><a href="#" title="Doing More">Doing More</a></li>
+														</ul>
+													</div>
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Corporate governance</h4>
+														<ul>
+															<li><a href="#" title="Roles">Roles</a></li>
+															<li><a href="#" title="Committees">Committees</a></li>
+															<li><a href="#" title="Memoranda &amp; Articles of Association">Memoranda &amp; Articles of Association</a></li>
+														</ul>
+													</div>
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Our heritage</h4>
+														<ul>
+															<li><a href="#" title="Timeline">Timeline</a></li>
+															<li><a href="#" title="Our Firsts">Our Firsts</a></li>
+															<li><a href="#" title="The Story">The Story</a></li>
+														</ul>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Complaints</h4>
+													</div>
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Group overview</h4>
+													</div>
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Directors</h4>
+													</div>                                                
+												</div>
+												<div class="row">
+													<div class="col-xs-4 col-sm-4 col-md-4">
+														<h4>Contact us</h4>
+													</div>                                               
+												</div>
+											</div>
+											<div class="col-xs-3 col-sm-3 col-md-3">
+												<div>
+													<img src="img/nav-content-img.jpg" alt="Image placeholder"/>
+													<h4>SME business advice</h4>
+													<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ut risus ante.</p>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" title="Our purpose">Our purpose</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>Our purpose</h3>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" title="Our brands">Our brands</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>Our brands</h3>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" title="Investors &amp; performance">Investors &amp; performance</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>Investors &amp; performance</h3>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" title="Media &amp; resource centre">Media &amp; resource centre</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>Media &amp; resource centre</h3>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+							<li><a href="#" title="Careers">Careers</a>
+								<ul>
+									<li>
+										<div class="row sub-nav">
+											<div class="col-xs-9 col-sm-9 col-md-9">
+												<div class="row">
+													<h3>Careers</h3>
+												</div>
+											</div>
+										</div>	
+									</li>
+								</ul>
+							</li>
+						</ul> 
+					</nav>		
+				</div>
+			</div>
+			<!-- Main Navigation Ends --> 
+        </header>
+        <!-- Header Ends -->
+        <!-- Story Module Starts -->
+        <div class="story">
+    	    <nav class="story-nav hidden-xs">
+        	    <ul>
+            	    <li><a href="#story1" title="Click here to view the next part of the story">Click here to view the next part of the story</a></li>
+                </ul>
+            </nav>
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter" id="story1" data-type="Opportunity">
+                <div class="bg-story" style="background:url(img/test-1.jpg);"><!-- --></div>
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	        <h2>Dream land</h2>
+                                <h3>Helping farming businesses to grow</h3>
+                                <p>In 1942, Graham Donaldson's grandfather took up tenancy of Viewley Hill Farm in the North Yorkshire Moors. Across three generations, the Donaldson family built a 160-acre farm into a 720-acre estate, diversifying their livestock and acquiring neighbouring parcels of land.</p>
+                                <p>Suddenly, in 2009, the Donaldson family had a dream opportunity - to buy Viewley Hill Farm. After many talks, Graham Donaldson and his two brothers seized their chance to purchase the farm their family had rented for 67 years.</p> 
+                            </section>
+                        </div> 
+                    </div>   
+                    <div class="row">       
+                        <div class="col-sm-6 col-md-6">
+                    	    <blockquote>
+                                <div>
+                                    <p>As the largest provider of long-term agricultural finance in the UK, AMC recognises the enduring potential of farming, and we support farmers with strong business plans.</p>
+                                </div>
+                                <p>Kevin Guy,</p> 
+                                <p>Agricultural Mortgage Corporation, Bedale</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter" id="story2" data-type="Challenge">
+                <div class="bg-story" style="background:url(img/test-2.jpg);"><!-- --></div>
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	        <h2>And then the hard work started</h2>
+                                <p>Unfortunately for the Donaldson brothers, raising the money to buy their farm wouldn't be easy at first.</p> 
+                                <p>"Initially we approached our high street bank, but after 10 weeks of meetings we still didn't have a definite answer" explained Graham. "Then, when the bank finally made an offer, they wanted to charge huge arrangement fees and repayment terms."</p> 
+                                <p>After trying another bank and finding the same problem, Graham finally contacted Kevin Guy, their local Agricultural Mortgage Corporation (AMC) agent.</p>
+                            </section>
+                        </div> 
+                    </div>   
+                    <div class="row">       
+                        <div class="col-sm-6 col-md-6">
+                    	    <blockquote>
+                    	        <div>
+                    		        <p>We'd used AMC in the past and always been delighted with their service.</p>
+                                </div>
+                                <p>Graham Donaldson,</p> 
+                                <p>Viewley Hill Farm</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter" id="story3" data-type="Challenge">
+                <div class="bg-story" style="background:url(img/test-3.jpg);"><!-- --></div>
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	    <h2>Dream land</h2>
+                                <h3>Helping farming businesses to grow</h3>
+                                <p>In 1942, Graham Donaldson's grandfather took up tenancy of Viewley Hill Farm in the North Yorkshire Moors. Across three generations, the Donaldson family built a 160-acre farm into a 720-acre estate, diversifying their livestock and acquiring neighbouring parcels of land.</p>
+                                <p>Suddenly, in 2009, the Donaldson family had a dream opportunity – to buy Viewley Hill Farm. After many talks, Graham Donaldson and his two brothers seized their chance to purchase the farm their family had rented for 67 years.</p> 
+                            </section>
+                        </div> 
+                    </div>   
+                    <div class="row">       
+                        <div class="col-sm-6 col-md-6">
+                    	    <blockquote>
+                                <div>
+                                    <p>As the largest provider of long-term agricultural finance in the UK, AMC recognises the enduring potential of farming, and we support farmers with strong business plans.</p>
+                                </div>
+                                <p>Kevin Guy,</p> 
+                                <p>Agricultural Mortgage Corporation, Bedale</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter" id="story4" data-type="Breakthrough">
+                <div class="bg-story" style="background:url(img/test-4.jpg);"><!-- --></div>
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	        <h2>A helping hand down on the farm</h2>
+                                <p>Graham asked Kevin Guy to give him a quote for an AMC loan. Inside a week, Kevin confirmed an approved loan offer. "We'd used AMC in the past and always been delighted with their service" explained Graham. "It was hassle free and easy to arrange the loan. Best of all, their lending rates were the most competitive."</p>
+						        <p>"We can plan further ahead now that our long-term future at Viewley Hill is secure. We've increased cow numbers to help service the loan, and we're in the process of building a new shed to provide more cow housing and are considering investing in a new parlour to reduce milking times."
+        </p>
+                            </section>
+							<div class="row featured-facts">
+								<div class="col-sm-6 col-md-6">
+									<p>50% <span>of loan fixed for 25 years</span></p>
+								</div>
+								<div class="col-sm-6 col-md-6">
+									<p><span>other</span> 50% <span>interest-only variable rate</span></p>
+								</div>
+							</div>
+                        </div> 
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter" id="story5" data-type="Support">
+                <div class="bg-story" style="background:url(img/test-5.jpg);"><!-- --></div>
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	        <h2>Help on the ground</h2>
+                                <p>As an agent for AMC in the North East and Yorkshire, Kevin Guy specialises in evaluating rural properties and agricultural tenancy matters at a very local level.</p> 
+                                <p>"Since 2009 we've seen a number of farming tenants purchasing their farms" Kevin observes. "These opportunities have arisen as landlords look for ways to release their capital and invest elsewhere."</p>
+                                <p>Spurred by rising land prices that have tempted landlords to put their estates on the market, Kevin has seen an increase in tenant farmers taking out long-term loans to buy farms they have previously rented.</p>
+                            </section>
+							<div class="row featured-facts">
+								<div class="col-sm-6 col-md-6">
+									<p>33% <span>cow herd increase</span></p>
+								</div>
+								<div class="col-sm-6 col-md-6">
+									<p>1,000 <span>litres a day extra milk production</span></p>
+								</div>
+							</div>
+                        </div> 
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+            <!-- Story Chapter Starts -->
+            <div class="story-chapter no-image" id="story6" data-type="Commitment">
+                <article class="content-wrapper">    
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6">
+                    	    <section>
+                    	        <h2>Fit and ready to work</h2>
+                                <p>Farming has remained strong during the financial downturn, and regional advisers like Kevin at AMC always aim to support farmers, so long as there are solid business plans in place. Just like good farming, it's all about preparation.</p>
+						        <p>"Seek good quality professional guidance to see if your plans are viable" advises Kevin. "Then it's simply a case of finding the best deal and ensuring that you fully understand the finer points of your loan agreement."</p>
+                            </section>
+                        </div> 
+                    </div>   
+                    <div class="row">       
+                        <div class="col-sm-6 col-md-6">
+                    	    <blockquote>
+                    	        <div>
+                    		        <p>Our landlord was keen to sell a large chunk of agricultural land. Land prices reached a high and he could realise a better return by selling the land to us.</p>
+                                </div>
+                                <p>Graham Donaldson</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </article>
+    	    </div>
+            <!-- Story Chapter Ends -->
+        </div>
+        <!-- Story Module Ends --> 
+        <!-- Footer Starts -->  
+        <footer>
+            <!-- Tagging Starts -->
+        	<div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <div class="story-tags">
+                        <h4>More stories about</h4>
+                        <ul>
+                            <li><a href="#" title="Helping businesses">Helping businesses</a>
+                        	    <ul>
+                            	    <li><a href="#" title="Nemo enim ipsam voluptatem quia et">Nemo enim ipsam voluptatem quia et</a></li>
+                                    <li><a href="#" title="Temporibus autem quibusdam">Temporibus autem quibusdam</a></li>
+                                    <li><a href="#" title="Dignissimos ducimus qui blanditiis">Dignissimos ducimus qui blanditiis</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="Community initiatives">Community initiatives</a>
+                        	    <ul>
+                            	    <li><a href="#" title="Nemo enim ipsam voluptatem quia et">Nemo enim ipsam voluptatem quia et</a></li>
+                                    <li><a href="#" title="Temporibus autem quibusdam">Temporibus autem quibusdam</a></li>
+                                    <li><a href="#" title="Dignissimos ducimus qui blanditiis">Dignissimos ducimus qui blanditiis</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="SMEs">SMEs</a>
+                        	    <ul>
+                            	    <li><a href="#" title="Nemo enim ipsam voluptatem quia et">Nemo enim ipsam voluptatem quia et</a></li>
+                                    <li><a href="#" title="Temporibus autem quibusdam">Temporibus autem quibusdam</a></li>
+                                    <li><a href="#" title="Dignissimos ducimus qui blanditiis">Dignissimos ducimus qui blanditiis</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="Bank of Scotland">Bank of Scotland</a>
+                        	    <ul>
+                            	    <li><a href="#" title="Nemo enim ipsam voluptatem quia et">Nemo enim ipsam voluptatem quia et</a></li>
+                                    <li><a href="#" title="Temporibus autem quibusdam">Temporibus autem quibusdam</a></li>
+                                    <li><a href="#" title="Dignissimos ducimus qui blanditiis">Dignissimos ducimus qui blanditiis</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#" title="Supporting SMEs">Supporting SMEs</a>
+                        	    <ul>
+                            	    <li><a href="#" title="Nemo enim ipsam voluptatem quia et">Nemo enim ipsam voluptatem quia et</a></li>
+                                    <li><a href="#" title="Temporibus autem quibusdam">Temporibus autem quibusdam</a></li>
+                                    <li><a href="#" title="Dignissimos ducimus qui blanditiis">Dignissimos ducimus qui blanditiis</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Tagging Ends --> 
+            <!-- Main Footer Content Starts --> 
+            <div class="footer-inner">     
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12">
+                        <nav>
+                            <ul>
+                                <li><a href="#" title="Accessibility">Accessibility</a></li>
+                                <li><a href="#" title="Cookie policy">Cookie policy</a></li>
+                                <li><a href="#" title="Privacy policy">Privacy policy</a></li>
+                                <li><a href="#" title="Site map">Site map</a></li>
+                                <li><a href="#" title="Site terms and conditions">Site terms and conditions</a></li>
+                                <li><a href="#" title="Copyright notice">Copyright notice</a></li>
+                            </ul>
+                        </nav>
+                        <p>By using www.lloydsbankinggroup.com you agree to the outlined use of cookies in our <a href="#" title="Read out outlined use of cookie notice">cookie notice</a>.</p>
+                        <p>Lloyds Bank plc, TSB Bank plc and Bank of Scotland plc (members of Lloyds Banking Group), are authorised by the Prudential Regulation Authority and regulated by the Financial Conduct Authority and the Prudential Regulation Authority.  Authorisation can be checked on the Financial Services Register at:<a href="#" title="Click here to view the Financial Services Register">www.fca.org.uk</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Main Footer Content Ends -->
+    	</footer>
+        <!-- Footer Ends -->
+            
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="http://code.jquery.com/jquery-latest.js"></script>  
+        <script src="js/plugins/waypoints.min.js"></script> 
+        <script src="js/lbg.init.js"></script> 
+		<script>
+            
+            $(function ($) {	
+                LBG.Website.options = {
+                    mobilePortrait: window.matchMedia('screen and (max-width: 479px)')
+                }		
+                
+                LBG.Website.init();
+            });
+        </script>
+    </body>
+</html>

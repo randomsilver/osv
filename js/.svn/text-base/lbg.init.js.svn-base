@@ -1,0 +1,286 @@
+var LBG = {
+    Website: {
+        init: function () {
+            var self = this;
+
+            $.extend(self, {
+                testVar: '',
+            }, self.options);
+			
+			// Initialise functions
+			self.resizeHandler();
+			self.responsiveCarousel.init();
+			self.storyPage.init(false);
+			self.megaNav.init();
+			self.scrollHandler.init(); // Initialise scroll handler for mega nav and story feature
+        },
+		
+		megaNav:{
+			init: function(){
+				var self = this;
+				
+				$('header nav').addClass('mega-nav'); // Adding this class stops default li:hover appearance of dropdown menu (still accessible without javascript)
+				$('body').prepend('<div id="mega-nav-panel"></div>'); // Prepend mega nav to page
+				
+				$.extend(self, {
+					dropdowns: new Array(),
+					navItems: $('nav ul ul .sub-nav'), // Default dropdown menu content
+					panel: $('#mega-nav-panel'),
+					closeButton: '<a href="#" class="close-button" style="display:none;">Close</a>'
+            	});
+				
+				self.navItems.each(function(index, element){ // Push all of the default dropdown menu content into an array
+					self.dropdowns.push(element);					
+				});		
+				
+				
+				$('header nav').on('click', 'a', function(e){
+					e.preventDefault();
+					
+					// If the mega nav is visible and the active nav item is clicked again we close the mega nav
+					if(self.panel.hasClass('open') && this.className === 'active'){ 
+						self.close(this);
+					}
+					else{
+						self.open(this);
+					}
+				});	
+				
+				$('#mega-nav-panel').on('click', '.close-button', function(e){
+					e.preventDefault();
+					
+					self.close();
+				});									
+			},
+			
+			open:function(element){
+				var self = this;
+				
+				$('header nav a').removeClass('active');
+				element.className = 'active'; // Add active class
+				var i = $(element).parent().index(); // Get index of nav item that has been clicked
+				self.panel.html($(self.dropdowns[i])); // Insert dropdown menu content html into the mega nav
+				self.panel.append(self.closeButton);
+				self.panel.addClass('open').slideDown(500, function(){ // Show mega nav
+				    $('#mega-nav-panel .close-button').show();
+				}); 				
+			},
+			
+			close: function(element){
+				var self = this;
+				$('#mega-nav-panel .close-button').hide();
+				if(typeof element != 'undefined'){
+					element.className = ''; // Remove active class
+				}
+				self.panel.removeClass('open').slideUp(500); // Hide mega nav
+			}
+		},
+		
+		scrollHandler:{ // Function allows mega nav to push down the page content when opens
+			init: function(){
+				var self = this;
+				
+				$.extend(self, {
+					scrollHeight:0
+            	});				
+			
+				self.checkScroll(document);	
+			
+				$(document).scroll(function(){
+					self.checkScroll(this);
+				});
+				
+				//window.scrollTo(0,0); // Set the story page to the top
+			},
+			checkScroll:function(element){
+				var self = this;
+				
+				var scrollPos = $(element).scrollTop();
+				
+				if(scrollPos > 0){
+					$('body').addClass('scrolling-nav');					
+				}
+				else{
+					$('body').removeClass('scrolling-nav');	
+				}		
+			},
+			
+			storyPaging:function (num, arr) {
+                var curr = arr[0];
+                var diff = Math.abs (num - curr);
+                for (var val = 0; val < arr.length; val++) {
+                    var newdiff = Math.abs (num - arr[val]);
+                    if (newdiff < diff) {
+                        diff = newdiff;
+                        curr = arr[val];
+                    }
+                }
+                return curr;
+            }
+		},			
+		
+		storyPage:{
+			init: function(destroy){
+				var self = this;
+				
+				$.extend(self, {
+					stories: new Array(),
+					storyHeights: new Array(),
+					totalHeight:0,
+					storyContainers: $('.story-chapter'), 
+					storyContent: $('.story-chapter .content-wrapper'),
+                	controls: $('.story-nav'),
+					button: $('.story-nav li')
+            	});
+				
+				self.tagHandler.init();
+				self.toolTip.init();					
+				
+				self.controls.appendTo('#story1');
+				self.storyType = $('#story2').data('type');
+				self.toolTip.copy.html(self.storyType);
+				
+				self.storyContainers.each(function(index, element){ // Push the id of all stories into the stories array
+					self.stories.push(element.id);	
+					
+					$('#' + element.id).waypoint(function() {
+							
+					    var index = parseInt($(this).index());
+					    if(index === 0){
+					        return;
+					    }
+
+						if(index < self.stories.length){
+					        index += 1;
+					        self.buttonClass = '';
+					    }
+					    else{
+					        index = 1;
+					        self.buttonClass = 'reverse';	
+					    }
+						
+					    self.storyType = $('#story' + index).data('type');
+					    self.button.attr('class', self.buttonClass);
+					    self.button.data('story-index', index);
+					    self.toolTip.copy.html(self.storyType);				
+					    
+
+					}, {offset:100});
+				});
+	
+				self.controls.on({
+					mouseenter: function () {
+						self.toolTip.show(this);
+					},
+					mouseleave: function () {
+						self.toolTip.hide(this);
+					},
+					click: function (e){
+						e.preventDefault();
+						
+						var index = parseInt($(this).data('story-index'));
+						var offset = 99;
+						
+						if(index == 1){
+							index = 1;
+							offset = 101;	
+						}
+						else if(isNaN(index)){	
+							index = 2;
+							$(this).data('story-index', 2)
+						}
+						
+						var topPos = $('#story' + index).position().top;
+						
+						// Animate scroll height	
+						$('html, body').animate({ scrollTop: (topPos - offset)}, 900, function(){ 
+							self.tagHandler.show();	
+						});
+					}
+				}, 'a');
+			},
+			
+			tagHandler:{
+				init:function(){
+					var self = LBG.Website;
+					
+					if(!$('.story-tags').length){
+						return false;
+					}
+					
+					self.storyPage.tags = $('.story-tags')[0].outerHTML;	
+					
+					self.storyPage.storyContent.each(function(index, element){
+						$(element).append(self.storyPage.tags);				
+					});
+					
+					$('footer .story-tags').addClass('visible-xs');
+					self.storyPage.storyContainers.find('.story-tags').each(function(index, element){
+						if(index == 0){
+							$(element).show();
+						}
+						else{
+							$(element).hide();	
+						}
+					});
+				},
+				show:function(){
+					var self = LBG.Website;	
+					//self.storyPage.storyContainers.find('.story-tags').eq(self.storyPage.currentStory - 1).fadeIn(300);
+				},
+				hide:function(){
+					var self = LBG.Website;
+					//self.storyPage.storyContainers.find('.story-tags').fadeOut(300);
+				}
+			},
+			
+			toolTip:{
+				init:function(){
+					var self = LBG.Website;
+					
+					self.storyPage.button.append('<ul class="tooltip"><li>' + self.storyPage.storyType + '</li></ul>');
+					self.storyPage.toolTip.copy = $('.tooltip li');		
+					self.storyPage.button = self.storyPage.button.find('a');
+				},
+				show:function(element){
+					var self = LBG.Website;
+					
+					$(this).data('title', this.title); // Store link title
+					this.title = ''; // Set title to nothing so that it doesn't display
+				
+				},
+				hide:function(element){
+					var self = LBG.Website;
+					
+					this.title = $(this).data('title'); // Restore link title
+					
+				}
+			}
+		},
+		
+		responsiveCarousel:{
+			init: function(){
+				/*var self = LBG.Website;
+				
+				if(self.mobilePortrait.matches && !window.mySwipe){
+					window.mySwipe = Swipe(document.getElementById('slider'));
+				}
+				else if(!self.mobilePortrait.matches && window.mySwipe){
+					window.mySwipe.kill();
+					delete window.mySwipe;
+				
+				}*/
+			}
+		},
+		
+		resizeHandler: function(){
+			var self = this;
+			
+			$(window).resize(function(){	
+				self.responsiveCarousel.init();
+	
+			});
+		}
+		
+	}
+}
