@@ -101,11 +101,11 @@ $(document).ready(function(){
   galleryLink();
 });
 
-var offsetHeight = 51;
+// var offsetHeight = 51;
 
-$('.nav-collapse').scrollspy({
-    offset: offsetHeight
-});
+// $('.nav-collapse').scrollspy({
+//     offset: offsetHeight
+// });
 
 $('.navbar li a').click(function (event) {
     var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - offsetHeight;
