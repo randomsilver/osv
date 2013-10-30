@@ -216,7 +216,23 @@ body {
 	}
 }
 
+#contact {
 
+	iframe {
+		width: 600px;
+		height: 400px;
+		border: none;
+
+		html {
+			body {
+			padding-top: 0;
+			padding-left: 0;
+			}
+		}
+		
+	}
+
+}
 .footnote {
 	font-size: 0.8em;
 }

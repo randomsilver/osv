@@ -87,19 +87,19 @@ $filterClass = $(this).attr('data-value');
 });
 $(document).ready(gallery);
 
-$(document).ready(function(){
+// $(document).ready(function(){
 
-  var galleryLink = function(){
-    $('#gallery a').on('click', function(e){
-      $('html, body').animate({
-        scrollTop: $("#gallery").offset().top - 50
-    }, 1000);
+//   var galleryLink = function(){
+//     $('#gallery a').on('click', function(e){
+//       $('html, body').animate({
+//         scrollTop: $("#gallery").offset().top - 50
+//     }, 1000);
 
-    });
-  };
+//     });
+//   };
 
-  galleryLink();
-});
+//   galleryLink();
+// });
 
 // var offsetHeight = 51;
 
@@ -107,12 +107,12 @@ $(document).ready(function(){
 //     offset: offsetHeight
 // });
 
-$('.navbar li a').click(function (event) {
-    var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - offsetHeight;
-    $('body,html').animate({
-        scrollTop: scrollPos
-    }, 500, function () {
-        $(".btn-navbar").click();
-    });
-    return false;
-});
+// $('.navbar li a').click(function (event) {
+//     var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - offsetHeight;
+//     $('body,html').animate({
+//         scrollTop: scrollPos
+//     }, 500, function () {
+//         $(".btn-navbar").click();
+//     });
+//     return false;
+// });
