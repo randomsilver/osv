@@ -27,7 +27,7 @@ my $image_dir = "/contact/img";
 my $formmail = "/contact/FormMail.cgi";
 
 # This is where you want the email to go.
-my $recipient = 'info@onesilveredvein.com';
+my $recipient = 'vpr3sence@gmail.com';
 
 # This is where the user should be taken to after submitting the form.
 my $redirect = "http://onesilveredvein.com";
@@ -66,6 +66,36 @@ Content-Type: text/html; charset=ISO-8859-1
   </head>
   <body>
     <form action="$formmail" method="post">
+      # <fieldset>
+      #   <legend>Your details</legend>
+      #   <ol>
+      #     <li>
+      #       <input type="hidden" name="subject" value="This is a test" />
+      #       <!-- This section must remain the same for Captcha support. -->
+      #       <input type="hidden" name="recipient" value="$recipient" />
+      #       <input type="hidden" name="redirect" value="$redirect" />
+      #       <input type="hidden" name="captcha-md5sum" value="$md5sum" />
+      #       <label for=name="realname">Name</label>
+      #       <input size="20" id=name="realname" name=name="realname" type=text placeholder="First and last name" required autofocus>
+      #     </li>
+      #     <li>
+      #       <label for=email>Email</label>
+      #       <input size="20" id=email name=email type=email placeholder="example@domain.com" required>
+      #     </li>
+      #     <li>
+      #       <label for=message>Message</label>
+      #       <input id=phone name=phone type=tel placeholder="Eg. +447500000000" required>
+      #       <textarea name="message" style="height: 120px; width: 300px;" placeholder="Please leave a message here" required></textarea>
+      #     </li>
+      #     <li>Please enter the image verification code below.</li>
+      #     <li><img src="$image_dir/$md5sum.png" /></li>
+      #     </li><input type="text" size="20" name="captcha-text" id="captcha-text" /></li>
+      #     <li>
+      #       <input value="Submit Comments" type="submit" />
+      #       <input value="Clear Form" type="reset" />
+      #     </li>
+      #   </ol>
+      # </fieldset>
       <table>
         <tr>
           <td>

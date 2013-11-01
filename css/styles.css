@@ -223,24 +223,34 @@ body .vein {
   color: #81983c;
 }
 
-/* line 221, sass/styles.scss */
-#contact iframe {
-  width: 600px;
-  height: 400px;
-  border: none;
-}
-/* line 227, sass/styles.scss */
-#contact iframe html body {
-  padding-top: 0;
-  padding-left: 0;
-}
+/*#contact {
+	overflow: scroll;
+	textarea {
+		height: 120px;
+		width: 320px;
+	}
 
-/* line 236, sass/styles.scss */
+	iframe {
+		width: 600px;
+		height: 400px;
+		border: none;
+
+		html {
+			body {
+			padding-top: 0;
+			padding-left: 0;
+			}
+		}
+		
+	}
+
+}*/
+/* line 241, sass/styles.scss */
 .footnote {
   font-size: 0.8em;
 }
 
-/* line 239, sass/styles.scss */
+/* line 244, sass/styles.scss */
 .screen-reader-text {
   position: absolute;
   left: -10000px;
@@ -250,7 +260,7 @@ body .vein {
   overflow: hidden;
 }
 
-/* line 248, sass/styles.scss */
+/* line 253, sass/styles.scss */
 .modal.fade {
   -webkit-transition: opacity 0.5s linear, 0.3s ease-out;
   -moz-transition: opacity 0.5s linear, 0.3s ease-out;
@@ -259,30 +269,30 @@ body .vein {
   top: 25%;
 }
 
-/* line 255, sass/styles.scss */
+/* line 260, sass/styles.scss */
 .modal {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
 }
-/* line 260, sass/styles.scss */
+/* line 265, sass/styles.scss */
 .modal .modal-body {
   padding: 0;
 }
-/* line 263, sass/styles.scss */
+/* line 268, sass/styles.scss */
 .modal .modal-body h4 {
   margin-left: 15px;
   margin-right: 15px;
   font-size: 14px;
 }
-/* line 269, sass/styles.scss */
+/* line 274, sass/styles.scss */
 .modal .modal-footer {
   border-top: 0;
   background-color: white;
 }
 
 /* Button override */
-/* line 276, sass/styles.scss */
+/* line 281, sass/styles.scss */
 .modal .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -297,7 +307,7 @@ body .vein {
   border: 1px solid #cccccc;
   background-image: none;
 }
-/* line 290, sass/styles.scss */
+/* line 295, sass/styles.scss */
 .modal .btn-primary {
   background-image: none;
   background-color: white;
@@ -305,7 +315,7 @@ body .vein {
   -moz-box-shadow: none;
   -o-box-shadow: none;
 }
-/* line 302, sass/styles.scss */
+/* line 307, sass/styles.scss */
 .modal .btn-primary:hover, .modal .btn-primary:focus, .modal .btn-primary:active, .modal .btn-primary.active, .modal .btn-primary.disabled, .modal .btn-primary[disabled] {
   background-color: white;
   border: 1px solid #81983c;
@@ -317,20 +327,20 @@ body .vein {
 
 /* Remove top padding when top navbar goes static in narrow viewports */
 @media (max-width: 979px) {
-  /* line 322, sass/styles.scss */
+  /* line 327, sass/styles.scss */
   body {
     padding-top: 100px;
   }
-  /* line 325, sass/styles.scss */
+  /* line 330, sass/styles.scss */
   body .navbar-fixed-top {
     position: fixed;
   }
-  /* line 329, sass/styles.scss */
+  /* line 334, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner h1 a.brand {
     margin-left: 35px;
     margin-top: 0;
   }
-  /* line 333, sass/styles.scss */
+  /* line 338, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .btn-navbar {
     margin-right: 30px;
     text-shadow: none;
@@ -343,7 +353,7 @@ body .vein {
     border: 0;
     background-image: none;
   }
-  /* line 345, sass/styles.scss */
+  /* line 350, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .btn-navbar .icon-bar {
     margin-bottom: 4px;
     text-shadow: none;
@@ -355,74 +365,79 @@ body .vein {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
   }
-  /* line 358, sass/styles.scss */
+  /* line 363, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner:hover {
     background-color: #FFFFFF;
   }
-  /* line 362, sass/styles.scss */
+  /* line 367, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right {
     margin-left: 24px;
   }
-  /* line 364, sass/styles.scss */
+  /* line 369, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li {
     float: left;
   }
-  /* line 367, sass/styles.scss */
+  /* line 372, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li .active > a {
     display: inline-block;
     padding-left: 0 !important;
   }
-  /* line 372, sass/styles.scss */
+  /* line 377, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li a {
     padding-left: 0;
     width: auto;
   }
-  /* line 375, sass/styles.scss */
+  /* line 380, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li a:hover {
     background-color: transparent;
   }
 }
 @media (max-width: 480px) {
-  /* line 388, sass/styles.scss */
+  /* line 393, sass/styles.scss */
   .page {
     /*padding-top: 0;*/
   }
-  /* line 391, sass/styles.scss */
+  /* line 396, sass/styles.scss */
   .page .nav-collapse {
     /*overflow: visible;
     height: auto;*/
   }
-  /* line 394, sass/styles.scss */
+  /* line 399, sass/styles.scss */
   .page .nav-collapse .nav > li {
     float: left;
   }
-  /* line 398, sass/styles.scss */
+  /* line 403, sass/styles.scss */
   .page .nav-collapse .nav > li a:hover,
   .page .nav-collapse .nav > li a:focus {
     background-color: #FFFFFF;
   }
-  /* line 403, sass/styles.scss */
+  /* line 408, sass/styles.scss */
   .page .active > a {
     border-bottom: none;
   }
-  /* line 407, sass/styles.scss */
+  /* line 412, sass/styles.scss */
   .page #home img {
     /*margin-top: 20% !important;*/
   }
 }
 @media (max-width: 320px) {
-  /* line 416, sass/styles.scss */
+  /* line 421, sass/styles.scss */
   body .nav-collapse {
     /*overflow: visible;
     height: auto;*/
   }
-  /* line 419, sass/styles.scss */
+  /* line 424, sass/styles.scss */
   body .nav-collapse .nav > li {
     float: left;
   }
-  /* line 423, sass/styles.scss */
+  /* line 428, sass/styles.scss */
   body .nav-collapse .nav > li a:hover,
   body .nav-collapse .nav > li a:focus {
     background-color: #FFFFFF;
+  }
+
+  /* line 435, sass/styles.scss */
+  #contact iframe {
+    width: 280px;
   }
 }

@@ -216,7 +216,12 @@ body {
 	}
 }
 
-#contact {
+/*#contact {
+	overflow: scroll;
+	textarea {
+		height: 120px;
+		width: 320px;
+	}
 
 	iframe {
 		width: 600px;
@@ -232,7 +237,7 @@ body {
 		
 	}
 
-}
+}*/
 .footnote {
 	font-size: 0.8em;
 }
@@ -424,6 +429,11 @@ body {
 					background-color: #FFFFFF;
 				}
 			}
+		}
+	}
+	#contact {
+		iframe {
+			width: 280px;
 		}
 	}
 }
