@@ -16,17 +16,16 @@ body {
 /* line 30, sass/styles.scss */
 body a:focus {
   outline: 0;
-  border: 10px solid red;
 }
-/* line 34, sass/styles.scss */
+/* line 33, sass/styles.scss */
 body a, body a:hover {
   color: #81983c;
 }
-/* line 38, sass/styles.scss */
+/* line 37, sass/styles.scss */
 body .nav-collapse .nav > li {
   float: left;
 }
-/* line 43, sass/styles.scss */
+/* line 42, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner,
 body .navbar-inner {
   background-color: white;
@@ -39,23 +38,23 @@ body .navbar-inner {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 54, sass/styles.scss */
+/* line 53, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner h1,
 body .navbar-inner h1 {
   line-height: 0;
 }
-/* line 58, sass/styles.scss */
+/* line 57, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner h1 a.brand,
 body .navbar-inner h1 a.brand {
   margin-left: 0;
   margin-top: 7px;
   padding-left: 0;
-  background: url("../img/osv-logo.png") 0 0 no-repeat;
+  /*background: url('../img/osv-logo.png') 0 0 no-repeat; */
   width: 266px;
   height: auto;
   display: block;
 }
-/* line 67, sass/styles.scss */
+/* line 66, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner h1 a.brand .strapline,
 body .navbar-inner h1 a.brand .strapline {
   font-family: 'Open Sans', sans-serif;
@@ -64,19 +63,19 @@ body .navbar-inner h1 a.brand .strapline {
   margin-left: 4px;
   line-height: 9em;
 }
-/* line 76, sass/styles.scss */
+/* line 75, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav,
 body .navbar-inner .nav {
   display: block;
   position: relative;
   margin-right: 10px;
 }
-/* line 81, sass/styles.scss */
+/* line 80, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav .icon-home,
 body .navbar-inner .nav .icon-home {
   display: none;
 }
-/* line 85, sass/styles.scss */
+/* line 84, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav a,
 body .navbar-inner .nav a {
   -webkit-transition: 1s all ease;
@@ -85,19 +84,19 @@ body .navbar-inner .nav a {
   border-bottom: 3px solid white;
   text-transform: uppercase;
 }
-/* line 92, sass/styles.scss */
+/* line 91, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav a:hover,
 body .navbar-inner .nav a:hover {
   background-color: #FFFFFF;
 }
-/* line 97, sass/styles.scss */
+/* line 96, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav .active > a,
 body .navbar-inner .nav .active > a {
   background-color: transparent;
   box-shadow: none;
   border-bottom: 3px solid #81983c;
 }
-/* line 102, sass/styles.scss */
+/* line 101, sass/styles.scss */
 body .navbar-fixed-top .navbar-inner .nav .active a:hover,
 body .navbar-inner .nav .active a:hover {
   background-color: transparent;
@@ -105,23 +104,24 @@ body .navbar-inner .nav .active a:hover {
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
 }
-/* line 111, sass/styles.scss */
+/* line 110, sass/styles.scss */
 body #wrap {
   margin-bottom: -53px;
   height: auto !important;
   min-height: 100%;
 }
-/* line 116, sass/styles.scss */
+/* line 115, sass/styles.scss */
 body #push, body #footer {
   height: 53px;
 }
-/* line 119, sass/styles.scss */
+/* line 118, sass/styles.scss */
 body #footer {
   position: relative;
 }
-/* line 122, sass/styles.scss */
+/* line 121, sass/styles.scss */
 body .page {
-  padding: 25px 0 100px 0;
+  /*padding: 25px 0 100px 0;*/
+  padding: 25px 0 0 0;
   position: relative;
   z-index: 99;
 }
@@ -162,9 +162,10 @@ body .nav-pills > li > a a:focus {
 }
 /* line 161, sass/styles.scss */
 body section {
-  min-height: 600px;
+  /*min-height: 600px;*/
+  max-height: 100%;
 }
-/* line 164, sass/styles.scss */
+/* line 165, sass/styles.scss */
 body #home {
   position: relative;
   overflow: hidden;
@@ -173,18 +174,18 @@ body #home {
   top: -10px;
   min-height: 600px;
 }
-/* line 172, sass/styles.scss */
+/* line 173, sass/styles.scss */
 body #home img {
   width: 100%;
   height: 100%;
 }
-/* line 178, sass/styles.scss */
+/* line 179, sass/styles.scss */
 body #gallery .thumbnails {
   /*			max-height: 400px;
   			overflow-y: scroll;*/
   border: 0;
 }
-/* line 183, sass/styles.scss */
+/* line 184, sass/styles.scss */
 body #gallery .thumbnails a {
   padding: 0;
   /*	border: 0 !important;*/
@@ -194,7 +195,11 @@ body #gallery .thumbnails a {
   -moz-border-radius: 0;
   -o-border-radius: 0;
 }
-/* line 193, sass/styles.scss */
+/* line 192, sass/styles.scss */
+body #gallery .thumbnails a > img {
+  width: 100%;
+}
+/* line 197, sass/styles.scss */
 body #gallery .thumbnails a.thumbnail:hover,
 body #gallery .thumbnails a.thumbnail:focus {
   border: 1px solid #81983c !important;
@@ -203,22 +208,22 @@ body #gallery .thumbnails a.thumbnail:focus {
   box-shadow: 0 1px 4px rgba(80, 106, 4, 0.25);
   background-color: #FFFFFF;
 }
-/* line 202, sass/styles.scss */
+/* line 206, sass/styles.scss */
 body .img-center {
   margin: 20px auto;
   display: block;
   width: 75%;
   height: 75%;
 }
-/* line 208, sass/styles.scss */
+/* line 212, sass/styles.scss */
 body .one {
   color: black;
 }
-/* line 211, sass/styles.scss */
-body .silvered {
+/* line 215, sass/styles.scss */
+body .silve {
   color: #cccccc;
 }
-/* line 214, sass/styles.scss */
+/* line 218, sass/styles.scss */
 body .vein {
   color: #81983c;
 }
@@ -245,12 +250,12 @@ body .vein {
 	}
 
 }*/
-/* line 241, sass/styles.scss */
+/* line 245, sass/styles.scss */
 .footnote {
   font-size: 0.8em;
 }
 
-/* line 244, sass/styles.scss */
+/* line 248, sass/styles.scss */
 .screen-reader-text {
   position: absolute;
   left: -10000px;
@@ -260,7 +265,7 @@ body .vein {
   overflow: hidden;
 }
 
-/* line 253, sass/styles.scss */
+/* line 257, sass/styles.scss */
 .modal.fade {
   -webkit-transition: opacity 0.5s linear, 0.3s ease-out;
   -moz-transition: opacity 0.5s linear, 0.3s ease-out;
@@ -269,30 +274,30 @@ body .vein {
   top: 25%;
 }
 
-/* line 260, sass/styles.scss */
+/* line 264, sass/styles.scss */
 .modal {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   -o-border-radius: 0;
 }
-/* line 265, sass/styles.scss */
+/* line 269, sass/styles.scss */
 .modal .modal-body {
   padding: 0;
 }
-/* line 268, sass/styles.scss */
+/* line 272, sass/styles.scss */
 .modal .modal-body h4 {
   margin-left: 15px;
   margin-right: 15px;
   font-size: 14px;
 }
-/* line 274, sass/styles.scss */
+/* line 278, sass/styles.scss */
 .modal .modal-footer {
   border-top: 0;
   background-color: white;
 }
 
 /* Button override */
-/* line 281, sass/styles.scss */
+/* line 285, sass/styles.scss */
 .modal .btn {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -307,7 +312,7 @@ body .vein {
   border: 1px solid #cccccc;
   background-image: none;
 }
-/* line 295, sass/styles.scss */
+/* line 299, sass/styles.scss */
 .modal .btn-primary {
   background-image: none;
   background-color: white;
@@ -315,7 +320,7 @@ body .vein {
   -moz-box-shadow: none;
   -o-box-shadow: none;
 }
-/* line 307, sass/styles.scss */
+/* line 311, sass/styles.scss */
 .modal .btn-primary:hover, .modal .btn-primary:focus, .modal .btn-primary:active, .modal .btn-primary.active, .modal .btn-primary.disabled, .modal .btn-primary[disabled] {
   background-color: white;
   border: 1px solid #81983c;
@@ -327,20 +332,20 @@ body .vein {
 
 /* Remove top padding when top navbar goes static in narrow viewports */
 @media (max-width: 979px) {
-  /* line 327, sass/styles.scss */
+  /* line 331, sass/styles.scss */
   body {
     padding-top: 100px;
   }
-  /* line 330, sass/styles.scss */
+  /* line 334, sass/styles.scss */
   body .navbar-fixed-top {
     position: fixed;
   }
-  /* line 334, sass/styles.scss */
+  /* line 338, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner h1 a.brand {
     margin-left: 35px;
     margin-top: 0;
   }
-  /* line 338, sass/styles.scss */
+  /* line 342, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .btn-navbar {
     margin-right: 30px;
     text-shadow: none;
@@ -353,7 +358,7 @@ body .vein {
     border: 0;
     background-image: none;
   }
-  /* line 350, sass/styles.scss */
+  /* line 354, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .btn-navbar .icon-bar {
     margin-bottom: 4px;
     text-shadow: none;
@@ -365,79 +370,98 @@ body .vein {
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
   }
-  /* line 363, sass/styles.scss */
+  /* line 367, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner:hover {
     background-color: #FFFFFF;
   }
-  /* line 367, sass/styles.scss */
+  /* line 371, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right {
-    margin-left: 24px;
+    margin-left: 22px;
   }
-  /* line 369, sass/styles.scss */
+  /* line 373, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li {
     float: left;
   }
-  /* line 372, sass/styles.scss */
+  /* line 376, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li .active > a {
     display: inline-block;
     padding-left: 0 !important;
   }
-  /* line 377, sass/styles.scss */
+  /* line 381, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li a {
     padding-left: 0;
     width: auto;
   }
-  /* line 380, sass/styles.scss */
+  /* line 384, sass/styles.scss */
   body .navbar-fixed-top .navbar-inner .nav-collapse .pull-right .nav > li a:hover {
     background-color: transparent;
   }
 }
 @media (max-width: 480px) {
-  /* line 393, sass/styles.scss */
+  /* line 397, sass/styles.scss */
   .page {
     /*padding-top: 0;*/
   }
-  /* line 396, sass/styles.scss */
+  /* line 400, sass/styles.scss */
   .page .nav-collapse {
     /*overflow: visible;
     height: auto;*/
   }
-  /* line 399, sass/styles.scss */
+  /* line 403, sass/styles.scss */
   .page .nav-collapse .nav > li {
     float: left;
   }
-  /* line 403, sass/styles.scss */
+  /* line 407, sass/styles.scss */
   .page .nav-collapse .nav > li a:hover,
   .page .nav-collapse .nav > li a:focus {
     background-color: #FFFFFF;
   }
-  /* line 408, sass/styles.scss */
+  /* line 412, sass/styles.scss */
   .page .active > a {
     border-bottom: none;
   }
-  /* line 412, sass/styles.scss */
+  /* line 416, sass/styles.scss */
   .page #home img {
     /*margin-top: 20% !important;*/
   }
 }
 @media (max-width: 320px) {
-  /* line 421, sass/styles.scss */
+  /* line 425, sass/styles.scss */
   body .nav-collapse {
-    /*overflow: visible;
-    height: auto;*/
-  }
-  /* line 424, sass/styles.scss */
-  body .nav-collapse .nav > li {
-    float: left;
+    overflow: visible;
+    height: auto;
   }
   /* line 428, sass/styles.scss */
+  body .nav-collapse .nav > li {
+    float: none;
+    font-size: 0.8em;
+    line-height: 10px;
+  }
+  /* line 432, sass/styles.scss */
+  body .nav-collapse .nav > li a {
+    float: none;
+  }
+  /* line 437, sass/styles.scss */
   body .nav-collapse .nav > li a:hover,
   body .nav-collapse .nav > li a:focus {
     background-color: #FFFFFF;
   }
-
-  /* line 435, sass/styles.scss */
-  #contact iframe {
-    width: 280px;
+  /* line 443, sass/styles.scss */
+  body h1 a.brand {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    width: 56% !important;
+  }
+  /* line 449, sass/styles.scss */
+  body .page {
+    padding-top: 50px;
+  }
+  /* line 451, sass/styles.scss */
+  body .page h2 {
+    display: none !important;
+  }
+  /* line 456, sass/styles.scss */
+  body #home, body section {
+    margin-top: -20px;
   }
 }

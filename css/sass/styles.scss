@@ -29,7 +29,6 @@ body {
 
   	a:focus {
   		outline: 0;
-  		border: 10px solid red;
   	}
   	a, a:hover {
   		color: #81983c;
@@ -59,7 +58,7 @@ body {
 				margin-left: 0;
 				margin-top: 7px;
 				padding-left: 0;
-				background: url('../img/osv-logo.png') 0 0 no-repeat; 
+				/*background: url('../img/osv-logo.png') 0 0 no-repeat; */
 				width: 266px;
 				height: auto;
 				display: block;
@@ -120,7 +119,8 @@ body {
 		position: relative;
 	}
 	.page {
-		padding: 25px 0 100px 0;
+		/*padding: 25px 0 100px 0;*/
+		padding: 25px 0 0 0;
 		position: relative;
 		z-index: 99;
 
@@ -159,7 +159,8 @@ body {
 		}
 	}
 	section {
-		min-height: 600px;
+		/*min-height: 600px;*/
+		max-height: 100%;
 	}
 	#home {
 		position: relative;
@@ -188,6 +189,9 @@ body {
 				-webkit-border-radius: 0;
 				-moz-border-radius: 0;
 				-o-border-radius: 0;
+				> img {
+					width: 100%;
+				}
 			}
 			a.thumbnail:hover,
 			a.thumbnail:focus {
@@ -208,7 +212,7 @@ body {
 	.one {
 		color: $darkColour;
 	}
-	.silvered {
+	.silve  {
 		color: $borderColour;
 	}	
 	.vein {
@@ -365,7 +369,7 @@ body {
 				}
 				.nav-collapse {
 					.pull-right {
-						margin-left: 24px;
+						margin-left: 22px;
 						.nav > li {
 							float: left;
 								.active {
@@ -419,10 +423,15 @@ body {
 @media (max-width: 320px) {
 	body {
 		.nav-collapse {
-			/*overflow: visible;
-			height: auto;*/
+			overflow: visible;
+			height: auto;
 			.nav > li {
-				float: left;
+				float: none;
+				font-size: 0.8em;
+				line-height: 10px;
+				a {
+					float: none;
+				}
 
 				a:hover, 
 				a:focus {
@@ -430,10 +439,22 @@ body {
 				}
 			}
 		}
-	}
-	#contact {
-		iframe {
-			width: 280px;
+		h1 {
+			a.brand {
+				padding-top: 0 !important;
+				padding-bottom: 0 !important;
+				width: 56% !important;
+			}
+		}
+		.page {
+			padding-top: 50px;
+			h2 {
+				display: none !important;
+			}
+		}
+		
+		#home, section {
+			margin-top: -20px;
 		}
 	}
 }

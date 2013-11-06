@@ -14,7 +14,7 @@ var lastId,
 // so we can get a fancy scroll animation
 menuItems.click(function(e){
   var href = $(this).attr("href"),
-      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+10;
   $('html, body').stop().animate({
   scrollTop: offsetTop
   }, 300);
@@ -87,25 +87,25 @@ $filterClass = $(this).attr('data-value');
 });
 $(document).ready(gallery);
 
-// $(document).ready(function(){
+$(document).ready(function(){
 
-//   var galleryLink = function(){
-//     $('#gallery a').on('click', function(e){
-//       $('html, body').animate({
-//         scrollTop: $("#gallery").offset().top - 50
-//     }, 1000);
+  var galleryLink = function(){
+    $('#gallery a').on('click', function(e){
+      $('html, body').animate({
+        scrollTop: $("#gallery").offset().top - 50
+    }, 1000);
 
-//     });
-//   };
+    });
+  };
 
-//   galleryLink();
-// });
+  galleryLink();
+});
 
-// var offsetHeight = 51;
+var offsetHeight = 0;
 
-// $('.nav-collapse').scrollspy({
-//     offset: offsetHeight
-// });
+$('.nav-collapse').scrollspy({
+    offset: offsetHeight
+});
 
 // $('.navbar li a').click(function (event) {
 //     var scrollPos = $('body > .container').find($(this).attr('href')).offset().top - offsetHeight;
